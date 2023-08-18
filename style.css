@@ -73,7 +73,7 @@ body {
 
 .form-container .form-horizontal .btn {
     color: #000;
-    background-color: #ac40ab;
+    background-color: #efefef;
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
@@ -87,10 +87,16 @@ body {
 
 .form-container .form-horizontal .btn:hover,
 .form-container .form-horizontal .btn:focus {
-    color: #fff;
     letter-spacing: 3px;
     box-shadow: none;
     outline: none;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px #fff;
+
+
 }
 
 /* login form design css end  */
+
+#transaction-area{
+    display: none;
+}
