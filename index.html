@@ -14,7 +14,7 @@
 
 <body>
     <div class="form-bg" id="login-area">
-        <h1 class="text-center text-secondary">Welcome to Pioneer Bank</h1>
+        <h1 class="text-center text-secondary">Welcome to Local Bank</h1>
         <div class="container">
             <div class="row justify-content-md-center">
                 <div class="col-lg-4 col-md-8 col-12">
@@ -37,28 +37,28 @@
             </div>
         </div>
     </div>
-    <div id="transaction-area">
+    <div id="transaction-area" style="display: none;">
         <div class="container my-5">
             <div class="row">
-                <div class="col-sm-4 px-5">
+                <div class="col-md-4 col-sm-6 px-1 px-sm-5 my-2">
                     <div class="card">
-                        <div class="card-body py-4 bg-primary  rounded text-white">
+                        <div class="card-body py-4 bg-primary text-center text-sm-start rounded text-white">
                             <h5 class="card-title">Deposit</h5>
                             <h1>$<span id="currentDeposit">500</span></h1>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 px-5">
+                <div class="col-md-4 col-sm-6 px-1 px-sm-5 my-2">
                     <div class="card">
-                        <div class="card-body py-4 bg-secondary rounded text-white">
+                        <div class="card-body py-4 bg-secondary text-center text-sm-start rounded text-white">
                             <h5 class="card-title">Withdraw</h5>
                             <h1>$<span id="currentWithdraw">50</span></h1>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 px-5">
+                <div class="offset-md-0 col-md-4 offset-sm-2 col-sm-8 px-1 px-sm-5 my-2">
                     <div class="card">
-                        <div class="card-body py-4 bg-success rounded text-white">
+                        <div class="card-body py-4 bg-success text-center text-sm-start rounded text-white">
                             <h5 class="card-title">Balance</h5>
                             <h1>$<span id="currentTotal">450</span></h1>
                         </div>
@@ -68,7 +68,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 px-5">
+                <div class="col-md-6 px-1 px-sm-5 my-3">
                     <div class="card">
                         <div class="card-body shadow p-4 rounded">
                             <h4 class="card-title fw-bold">Deposit</h4>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 px-5">
+                <div class="col-md-6 px-1 px-sm-5 my-3">
                     <div class="card">
                         <div class="card-body shadow p-4 rounded">
                             <h4 class="card-title fw-bold">Withdraw</h4>
@@ -144,7 +144,7 @@
             // const currentTotalNumber = parseFloat(currentTotal);
             // const totalDeposit = currentTotalNumber - withdrawAmountNumber;
             // document.getElementById("currentTotal").innerText = totalDeposit;
-            updateSpanText("currentTotal", -1*withdrawAmountNumber);
+            updateSpanText("currentTotal", -1 * withdrawAmountNumber);
             // //value remove 
             document.getElementById("withdrawAmount").value = ""
         })
