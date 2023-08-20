@@ -155,15 +155,26 @@
             // const currentWithdrawNumber = parseFloat(currentWithdraw);
             // const totalWithdraw = withdrawAmountNumber + currentWithdrawNumber;
             // document.getElementById("currentWithdraw").innerText = totalWithdraw;
-            updateSpanText("currentWithdraw", withdrawAmountNumber);
 
             // const currentTotal = document.getElementById("currentTotal").innerText;
             // const currentTotalNumber = parseFloat(currentTotal);
             // const totalDeposit = currentTotalNumber - withdrawAmountNumber;
             // document.getElementById("currentTotal").innerText = totalDeposit;
-            updateSpanText("currentTotal", -1 * withdrawAmountNumber);
             // //value remove 
-            document.getElementById("withdrawAmount").value = ""
+            if (withdrawAmountNumber < 0) {
+                alert("Deposit number can't be negative");
+            }
+            else if (document.getElementById("withdrawAmount").value == "") {
+                alert("Please fill your value");
+            }
+            else if (withdrawAmountNumber > document.getElementById("currentTotal").innerText) {
+                alert("Enough balance");
+            }
+            else {
+                updateSpanText("currentWithdraw", withdrawAmountNumber);
+                updateSpanText("currentTotal", -1 * withdrawAmountNumber);
+                document.getElementById("withdrawAmount").value = ""
+            }
         })
         function getInputNumber(id) {
             const Amount = document.getElementById(id).value;
